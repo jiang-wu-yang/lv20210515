@@ -1,0 +1,7 @@
+@keyframes ud {
+  from {
+    transform: translateY(-10px); }
+  to {
+    transform: translateY(10px); } }
+
+/*# sourceMappingURL=scssConfig.css.map */

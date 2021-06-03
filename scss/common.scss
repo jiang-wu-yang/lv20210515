@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import 'scssConfig';
+
+//主宽度
+.container {
+    width: $container;
+    margin: 0 auto;
+}
+
+//主字体
+@font-face {
+    font-family: "PingFangSCRegular";
+    src: url('../font/PingFangSCRegular.ttf') format('truetype');
+}
+
+body {
+    font-family: "PingFangSCRegular";
+}
+
+//字体图标
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_logo/iconfont.ttf?t=1621678111206') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//标题的共有样式
+.content-part {
+    h2 {
+        font-size: 36px;
+        font-weight: bold;
+        color: #1c1f21;
+    }
+
+    em {
+        position: relative;
+        top: 20px;
+        left: 10px;
+        color: #1c1f21;
+    }
+}
+
+
+//
+.content-part {
+    .hd {
+        h2 {
+            float: left;
+        }
+
+        em {
+            float: left;
+        }
+
+        nav {
+            float: right;
+
+            ul {
+                padding-top: 16px;
+
+                li {
+                    float: left;
+                    margin-right: 16px;
+                    font-size: 14px;
+
+                    a {
+                        color: rgba(0, 0, 0, 0.85);
+                    }
+
+                    &.current {
+                        border-bottom: 4px solid #20bd9a;
+                        padding-bottom: 4px;
+
+                        a {
+                            color: #20bd9a;
+                        }
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//tag公用属性
+.content-part {
+    .bd {
+        li {
+            .tag {
+                position: absolute;
+                width: 74px;
+                height: 40px;
+                color: white;
+                background-color: rgba(0, 0, 0, 0.55);
+                bottom: 103px;
+                left: 0;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+
+//更多的公用属性
+.content-part {
+    .bd {
+        .more-grid {
+            width: 264px;
+            height: 270px;
+            padding-top: 46px;
+            box-sizing: border-box;
+            position: relative;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.20);
+            // background-color: green;
+            background-image: linear-gradient(180deg, #34e3bc 0%, #15af7a 98%);
+            &:hover{
+                .iconfont{
+                    animation: ud .4s ease 0s infinite alternate;
+                }
+            }
+            p {
+                text-align: center;
+                color: white;
+                line-height: 24px;
+                font-size: 15px;
+            }
+
+            .iconfont {
+                position: absolute;
+                font-size: 48px;
+                color: white;
+                width: 48px;
+                height: 48px;
+                left: 50%;
+                top: 118px;
+                margin-left: -24px;
+                
+            }
+
+            ul {
+                margin-top: 112px;
+                padding-left: 42px;
+
+                li {
+                    float: left;
+                    color: white;
+                    border-right: 1px solid white;
+                    padding: 0 6px;
+                    height: 16px;
+                    line-height: 16px;
+                    font-size: 15px;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//鼠标触碰放大
+.content-part{
+    li{
+        overflow: hidden;
+        .picbox{
+            height: 184px;
+            overflow: hidden;
+        }
+    }
+    .grid{
+        overflow: hidden;
+    }
+    img{
+        transition:transform .4s ease 0s;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+//自由行公共类
+.common-style {
+    height: 698px;
+    padding-top: 40px;
+    .hd{
+        nav{
+            width: 488px;
+        }
+    }
+    .bd {
+        padding-top: 32px;
+
+        >ul {
+            >li {
+                float: left;
+                margin-right: 32px;
+                margin-bottom: 32px;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.20);
+                background-color: white;
+                &:hover {
+                    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.55);
+                }
+
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(7) {
+                    margin-right: 0;
+                }
+            }
+
+            .big-grid {
+                width: 560px;
+                height: 270px;
+                // background-color: red;
+                position: relative;
+
+                .info {
+                    position: absolute;
+                    width: 560px;
+                    height: 103px;
+                    bottom: 0;
+                    left: 0;
+                    color: white;
+                    background-color: rgba(0, 0, 0, 0.55);
+                    padding: 30px 26px;
+                    box-sizing: border-box;
+                }
+            }
+
+            .pro-grid {
+                width: 264px;
+                height: 270px;
+
+                // background-color: black;
+                .picbox {
+                    position: relative;
+                    height: 184px;
+
+                    .tag {
+                        bottom: 0;
+                    }
+                }
+
+                .wordbox {
+                    padding: 14px;
+                    font-size: 14px;
+                    color: #1c1f21;
+                    line-height: 26px;
+                }
+            }
+        }
+    }
+}
+
+//clearFix  清除浮动
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+
+
+//for循环定义padding偏移值
+@for $i from 1 to 100 {
+    .padding-top-#{$i} {
+        padding-top: (1px * $i);
+    }
+
+    .padding-bottom-#{$i} {
+        padding-bottom: (1px * $i);
+    }
+}

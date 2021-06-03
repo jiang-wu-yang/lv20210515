@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAaA,aAOC;EANG,IAAI;IACA,SAAS,EAAE,iBAAiB;EAEhC,EAAE;IACE,SAAS,EAAE,gBAAgB",
+"sources": ["../scss/scssConfig.scss"],
+"names": [],
+"file": "scssConfig.css"
+}
